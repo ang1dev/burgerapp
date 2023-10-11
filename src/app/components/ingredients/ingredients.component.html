@@ -1,0 +1,8 @@
+<div class="wrapper">
+
+    <app-ingredients-list (onSelectIngredients)="handleSelectIngredients($event)" [selectedIngredients]="ingredients" />
+
+    <app-selected-ingredients (handleDeleteIngredient)="handleDeleteIngredient($event)"
+        [selectedIngredients]="ingredients" />
+
+</div>

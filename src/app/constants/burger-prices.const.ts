@@ -1,0 +1,7 @@
+export const SMALL_INGREDIENT_PRICE = 0.15
+export const MEDIUM_INGREDIENT_PRICE = 0.3
+export const LARGE_INGREDIENT_PRICE = 0.45
+
+export const SMALL_BURGER_PRICE = 1
+export const MEDIUM_BURGER_PRICE = 3
+export const LARGE_BURGER_PRICE = 5

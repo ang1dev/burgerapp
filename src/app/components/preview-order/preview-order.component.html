@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="container">
+        <h1>Your order:</h1>
+        <mat-list>
+            <mat-list-item *ngFor="let burger of (activeOrder$ | async)">
+                <span matListItemTitle>
+                    {{burger.name}}
+                </span>
+                <span matListItemLine>
+                    Size: {{burger.size | normalizeEnum}} | Ingredients: {{burger.ingredients.join(',')}}
+                </span>
+                <span MatListItemLine>
+                    Price:{{burger.price | currency: 'EUR': true}}
+                </span>
+            </mat-list-item>
+
+        </mat-list>
+
+        <div>
+            <h3>Total price: {{calculateTotalPrice(activeOrder$ | async) | currency: "EUR": true}}</h3>
+            <button mat-raised-button matStepperNext color="primary">Go to checkout</button>
+        </div>
+
+    </div>
+</div>

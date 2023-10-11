@@ -1,0 +1,8 @@
+<h1>Ingredients:</h1>
+
+<mat-selection-list (selectionChange)="onSelect($event)">
+    <mat-list-option *ngFor="let ingredient of ingredients" [value]="ingredient"
+        [selected]="selectedIngredients.includes(ingredient)">
+        {{ ingredient | normalizeEnum }}
+    </mat-list-option>
+</mat-selection-list>

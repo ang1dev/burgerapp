@@ -1,0 +1,9 @@
+<mat-card *ngIf="!!burger" appChiliBurger [ingredients]='burger.ingredients'>
+    <mat-card-header>{{ burger.name }}</mat-card-header>
+    <img mat-card-image height="300px" width="300px" [src]="burger.image" [alt]="burger.name" />
+    <mat-card-content>
+        <mat-chip *ngFor="let ingredient of burger.ingredients">
+            {{ ingredient | normalizeEnum }}
+        </mat-chip>
+    </mat-card-content>
+</mat-card>
